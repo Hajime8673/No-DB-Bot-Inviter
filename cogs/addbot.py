@@ -23,7 +23,7 @@ class AddBot(commands.Cog):
         if bot in ctx.guild.members:
             return await ctx.send(f"Bot {bot.name} already in this server!")
         emb = discord.Embed(title=f'New bot {bot.name} (ID: {bot.id})',color=0x7289da)
-        emb.description = 'No Description is Provided' if desc is None else f"Added by: {str(ctx.author)}\nInvite: [Click Here to Invite](https://discord.com/oauth2/authorize?client_id={bot.id}&scope=bot&guild_id=720365448809545742)\n\nDescription: {desc[:1200]}"
+        emb.description = 'No Description is Provided' if desc is None else f"Added by: {str(ctx.author)}\nInvite: [Click Here to Invite](https://discord.com/oauth2/authorize?client_id={bot.id}&scope=bot&guild_id={ctx.guild.id})\n\nDescription: {desc[:1200]}"
         emb.set_footer(text=f'{bot.id} | {ctx.author.id}')
         try:
             chan = self.client.get_channel(config.invite_log_id)
