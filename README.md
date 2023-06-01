@@ -2,7 +2,7 @@
 ## Installing
 1. Open `config.py`
 2. Replace all the variavle in `config.py` with your own information.(Follow Comments)
-3. Install `Python 3.9+`
+3. Install `Python 3.8+`
 4. Install `requirements.txt`
 5. run using `run.bat` or `inviter.py`
 6. Use `>>addbot [ID] [Description]` to submit a bot. 
